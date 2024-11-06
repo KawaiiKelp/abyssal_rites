@@ -12,7 +12,9 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, AbyssalRites.MOD_ID);
 
     public static final RegistryObject<Item> DIAMANTE = ITEMS.register("diamante",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties())); // Diamante 아이템 등록
+    public static final RegistryObject<Item> ABYSS_SHARD = ITEMS.register("abyss_shard",
+            () -> new Item(new Item.Properties())); // Abyss Shard 아이템 등록
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

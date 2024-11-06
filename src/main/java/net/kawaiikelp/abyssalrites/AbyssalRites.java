@@ -1,6 +1,7 @@
 package net.kawaiikelp.abyssalrites;
 
 import com.mojang.logging.LogUtils;
+import net.kawaiikelp.abyssalrites.item.ModCreativeModeTabs;
 import net.kawaiikelp.abyssalrites.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -29,6 +30,8 @@ public class AbyssalRites {
     public AbyssalRites() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
@@ -46,6 +49,7 @@ public class AbyssalRites {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.DIAMANTE);
+            event.accept(ModItems.ABYSS_SHARD);
         }
     }
 

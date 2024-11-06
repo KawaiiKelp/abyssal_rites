@@ -1,3 +1,6 @@
 {
-  "item.abyssalrites.diamante": "Diamante"
+  "item.abyssalrites.diamante": "Diamante",
+  "item.abyssalrites.abyss_shard": "Abyss Shard",
+
+  "creativetab.abyssal_rites_items": "Abyssal Rites: Items"
 }

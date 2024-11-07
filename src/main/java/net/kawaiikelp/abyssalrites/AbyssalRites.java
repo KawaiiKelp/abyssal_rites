@@ -1,6 +1,7 @@
 package net.kawaiikelp.abyssalrites;
 
 import com.mojang.logging.LogUtils;
+import net.kawaiikelp.abyssalrites.block.ModBlocks;
 import net.kawaiikelp.abyssalrites.item.ModCreativeModeTabs;
 import net.kawaiikelp.abyssalrites.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -33,6 +34,7 @@ public class AbyssalRites {
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

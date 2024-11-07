@@ -6,7 +6,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -20,7 +19,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, AbyssalRites.MOD_ID);
 
     public static final RegistryObject<Block> ABYSS_BLOCK = registerBlock("abyss_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SCULK).sound(SoundType.SCULK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
